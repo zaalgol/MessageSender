@@ -1,11 +1,10 @@
-package com.imperva.smsSending.data;
+package com.imperva.smsSending.models;
 
 import lombok.Data;
 
 @Data
 public abstract class Message {
     private int id;
-    private String content;
     private long timeStapm;
 
     public Message(int id) {

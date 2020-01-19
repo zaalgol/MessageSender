@@ -1,9 +1,8 @@
 package com.imperva.smsSending.service;
 
 import com.imperva.smsSending.IStorageHandler;
-import com.imperva.smsSending.data.Message;
-import com.imperva.smsSending.data.SmsMessage;
-import com.imperva.smsSending.service.IMessageService;
+import com.imperva.smsSending.models.Message;
+import com.imperva.smsSending.models.SmsMessage;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

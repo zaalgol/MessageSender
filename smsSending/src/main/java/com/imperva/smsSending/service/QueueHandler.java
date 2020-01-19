@@ -3,7 +3,7 @@ package com.imperva.smsSending.service;
 
 import com.imperva.smsSending.IStorageHandler;
 import com.imperva.smsSending.ReaderThread;
-import com.imperva.smsSending.data.Message;
+import com.imperva.smsSending.models.Message;
 import javafx.util.Pair;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;

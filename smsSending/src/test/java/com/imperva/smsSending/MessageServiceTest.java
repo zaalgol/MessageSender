@@ -1,7 +1,6 @@
 package com.imperva.smsSending;
 
-import com.imperva.smsSending.data.Message;
-import com.imperva.smsSending.data.SmsMessage;
+import com.imperva.smsSending.models.SmsMessage;
 import com.imperva.smsSending.service.MessageService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -1,14 +1,22 @@
 package com.imperva.smsSending;
 
-import com.imperva.smsSending.data.Message;
+import com.imperva.smsSending.models.Message;
+//import com.imperva.smsSending.sendingToReceiver.SendingMessage;
+
+
 import javafx.util.Pair;
 
 import java.util.*;
 import java.util.concurrent.*;
 
+
 public class SendingHandler {
-    final Random random = new Random(5);
+    final Random random = new Random();
+
+    //SendingMessage sendingMessage;
     Map<Future<Boolean>, Message> futureToSendedMessage;
+
+
 
     private void handleFutureResults(List<Future<Boolean>> futures,
                                      List<Message> messages,
@@ -35,6 +43,7 @@ public class SendingHandler {
     }
 
     public SendingHandler() {
+       // sendingMessage = new SendingMessage();
         futureToSendedMessage = new HashMap<>();
     }
 
@@ -44,6 +53,7 @@ public class SendingHandler {
             ExecutorService executorService = Executors.newFixedThreadPool(10);
             for (Message message : messages) {
                 callableTasks.add(() -> {
+                   // return sendingMessage.sendMessage(message);
                     return sendMessage(message);
                     //System.out.println(Thread.currentThread().getId());
                 });

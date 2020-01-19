@@ -1,10 +1,8 @@
 package com.imperva.smsSending.service;
 
-import com.imperva.smsSending.data.Message;
+import com.imperva.smsSending.models.Message;
 import javafx.util.Pair;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
