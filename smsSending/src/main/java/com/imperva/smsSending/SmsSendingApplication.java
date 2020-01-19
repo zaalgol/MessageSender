@@ -1,4 +1,4 @@
-package com.imperva.smsSending.messagesHandler;
+package com.imperva.smsSending;
 
 import com.imperva.smsSending.service.IMessageService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
-
 
 @SpringBootApplication
 @EnableAsync

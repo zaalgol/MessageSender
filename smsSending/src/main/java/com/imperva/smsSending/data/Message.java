@@ -12,7 +12,7 @@ public abstract class Message {
     private int id;
 
     @Id
-    private long timeStapm;
+    private long timestapm;
 
     public Message(int id) {
         this.id = id;

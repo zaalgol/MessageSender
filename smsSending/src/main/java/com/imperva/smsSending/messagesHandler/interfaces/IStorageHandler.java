@@ -1,4 +1,4 @@
-package com.imperva.smsSending.messagesHandler;
+package com.imperva.smsSending.messagesHandler.interfaces;
 
 import com.imperva.smsSending.data.Message;
 

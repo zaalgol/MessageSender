@@ -1,12 +1,10 @@
-package com.imperva.smsSending.service;
+package com.imperva.smsSending.messagesHandler;
 
 
-import com.imperva.smsSending.messagesHandler.IStorageHandler;
-import com.imperva.smsSending.messagesHandler.ReaderThread;
 import com.imperva.smsSending.data.Message;
+import com.imperva.smsSending.messagesHandler.interfaces.IStorageHandler;
 import javafx.util.Pair;
 import lombok.Data;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +16,6 @@ import java.util.Random;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.stream.Collectors;
 
-@Slf4j
 @Data
 @Service
 public class QueueHandler implements IStorageHandler {
