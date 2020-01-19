@@ -20,14 +20,6 @@ public class MessageService implements IMessageService {
     @Autowired
     IStorageHandler storageHandler;
 
-
-    @PostConstruct
-    private void init() {
-        for (int i = 0; i < 200000; i++)
-            newMessage(new SmsMessage(i));
-
-    }
-
     @Override
     public void newMessage(Message message) {
         Thread aThread = new Thread(() ->

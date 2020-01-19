@@ -3,6 +3,7 @@ package com.imperva.smsSending;
 import com.imperva.smsSending.data.Message;
 import com.imperva.smsSending.data.SmsMessage;
 import com.imperva.smsSending.service.MessageService;
+import com.imperva.smsSending.service.QueueHandler;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -10,8 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
-
+@ContextConfiguration(classes = {MessageService.class, QueueHandler.class})
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @PropertySource(value = "classpath:application.properties")
@@ -21,43 +23,18 @@ class MessageServiceTest {
     @Autowired
     MessageService messageService;
 
-    @BeforeEach
-    void setUp() {
-
-//        Thread aThread = new Thread(() -> {
-//            messageService.newMessage(new Message());
-//            for (int i = 0; i < 100; i++) {
-//
-//                try {
-//                    Thread.sleep(1000);
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        });
-//        aThread.getThreadGroup().setDaemon(true);
-//        aThread.start();
-    }
+    @Autowired
+    QueueHandler queueHandler;
 
     @Test
     void newMessage() {
-        messageService.newMessage(new SmsMessage());
-        for (long i = 0; i < 1000000000; i++) {
-            for (long j = 0; j < 1000000000; j++) {
-
-            }
+        for (int i = 0; i < 200000; i++){
+            messageService.newMessage(new SmsMessage(i));
         }
-        int y = 0;
-//        try {
-//            TimeUnit.MINUTES.sleep(2);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
-
     }
 
     @Test
     void wakeup() {
-        // messageService.wakeup();
+        messageService.wakeup();
     }
 }
