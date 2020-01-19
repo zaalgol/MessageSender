@@ -1,11 +1,17 @@
 package com.imperva.smsSending.data;
 
+
 import lombok.Data;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 @Data
 public abstract class Message {
     private int id;
-    private String content;
+
+    @Id
     private long timeStapm;
 
     public Message(int id) {
