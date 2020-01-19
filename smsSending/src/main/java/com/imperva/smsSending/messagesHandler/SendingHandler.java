@@ -1,4 +1,4 @@
-package com.imperva.smsSending;
+package com.imperva.smsSending.messagesHandler;
 
 import com.imperva.smsSending.data.Message;
 import javafx.util.Pair;

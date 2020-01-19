@@ -1,4 +1,4 @@
-package com.imperva.smsSending;
+package com.imperva.smsSending.messagesHandler;
 
 import com.imperva.smsSending.service.IMessageService;
 import org.springframework.beans.factory.annotation.Autowired;

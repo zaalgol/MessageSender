@@ -1,16 +1,12 @@
 package com.imperva.smsSending.service;
 
-import com.imperva.smsSending.IStorageHandler;
+import com.imperva.smsSending.messagesHandler.IStorageHandler;
 import com.imperva.smsSending.data.Message;
-import com.imperva.smsSending.data.SmsMessage;
-import com.imperva.smsSending.service.IMessageService;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
-
-import javax.annotation.PostConstruct;
 
 @Slf4j
 @Data

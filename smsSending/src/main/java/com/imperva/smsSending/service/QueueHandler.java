@@ -1,8 +1,8 @@
 package com.imperva.smsSending.service;
 
 
-import com.imperva.smsSending.IStorageHandler;
-import com.imperva.smsSending.ReaderThread;
+import com.imperva.smsSending.messagesHandler.IStorageHandler;
+import com.imperva.smsSending.messagesHandler.ReaderThread;
 import com.imperva.smsSending.data.Message;
 import javafx.util.Pair;
 import lombok.Data;
